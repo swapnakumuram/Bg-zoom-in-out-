@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+
+.bgbox {
+    margin: 0;
+    overflow: hidden; /*horizontal(kinda) scrollbar pothundi */
+    height: 100vh;/* vertical hight scrollbar pothundi*/
+    /* width: 100vw; */
+}
+.bgbox img{
+    transform: scale(1.2);  /*zoom kodiga avuthadi*/
+    animation: bg_zoom 6s infinite;
+}
+.box{
+    position: fixed;/* pic lo box mayamavuthadi*/
+    top: 30px;/*top: 30px=box black show avuthadi /top: 30px=kindiki avuthadi*/
+
+    left: 30px;/* box right ki vasthadi*/
+    width: 450px;/*kinda  white gap vasthadi*/
+    height: 450px;
+    border: 3px solid;/* kinda white box ki boreder black vasthadi*/
+    box-shadow: 0px 0px 6px #000;/*position fixed paina ray*/
+    
+    /* background-color: aqua; */
+   background: url(images/chiranjeevi450.jpg);
+   /* animation: box_anim 3s 3;/*color change effects 3sec */
+   animation: box_anim 6s infinite;
+}  
+@keyframes box_anim {
+   10% {
+    top: 100px;
+   }/*pic paina thakatledu*/
+   50%{ 
+        /* background-color: #017e55;*/ /* animation pain ray */
+background: url(images/ramcharan450.jpg);
+  /*left: 500px; =sagam varaku vasthadi*/
+/*left: 100vw;=border dati pothundi*/
+/* left: calc(100vw - 450px);= border ni thaki vasthundi */
+/* left: calc(100vw - 450px -30px); */
+left: calc(100vw - 450px - 30px);
+/* transform: scale(0.85); /*1st pic big + 2nd pic small avuthundi */
+/* transform: scale(0.85) rotate(360deg); /*rotate(360deg); = rotate avuthundi */
+/* transform: scale(0.85) rotate(360deg); +3s =too fast */
+/* transform: scale(0.85) rotate(360deg); +6s =slow */
+transform: scale(0.85) rotate(360deg);   /*painaa 10% ray kinda 80% ray top*/
+    }
+    80%{
+        top: 100px;
+    }
+}
+
+@keyframes bg_zoom{
+    50%{
+        transform: scale(1);
+    }
+}
+
+
+
